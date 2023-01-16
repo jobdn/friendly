@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 15px;
+
+    color: #fff;
+
+    background-color: #0E64D2;
+}
+
+.navList {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navItem {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__row {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.header__button {
+    color: #0E64D2;
+    background-color: white;
+}
+
+.profile__subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #f00;
+}

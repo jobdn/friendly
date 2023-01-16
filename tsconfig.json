@@ -6,7 +6,9 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"]
     },
     "allowJs": true,
     "noEmit": true,
