@@ -1,7 +1,7 @@
 {
-  "name": "jwt-client",
+  "name": "friendonly",
   "version": "1.0.0",
-  "description": "Webpack tut-project",
+  "description": "friendonly awesome application",
   "private": true,
   "scripts": {
     "dev": "webpack --node-env development",
@@ -51,6 +51,7 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.0",
     "jest": "^29.3.1",
+    "jest-css-modules": "^2.1.0",
     "jest-environment-jsdom": "^29.3.1",
     "lint-staged": "^13.1.0",
     "mini-css-extract-plugin": "^2.7.2",

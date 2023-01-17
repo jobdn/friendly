@@ -9,6 +9,7 @@ export default {
     "^@models/(.*)": "<rootDir>/src/models/$1",
     "^@hooks/(.*)": "<rootDir>/src/hooks/$1",
     "^@store/(.*)": "<rootDir>/src/store/$1",
+    "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules",
   },
   preset: "ts-jest",
   setupFilesAfterEnv: ["./jest-setup.ts"],
