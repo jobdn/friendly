@@ -1,0 +1,38 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Formation and linting
+        run: |
+          npm run lint
+          npm run stylelint
+          npm run tsc:check
+
+      - name: Testing
+        run: npm run test
+
+      # - name: Deploy
+      #   uses: jsmrcaga/action-netlify-deploy@v1.1.0
+      #   with:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      #     NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
+      #     NETLIFY_DEPLOY_TO_PROD: true

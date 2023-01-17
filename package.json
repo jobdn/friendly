@@ -12,7 +12,10 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "stylelint": "stylelint src/**/*.{scss,css}",
-    "stylelint:fix": "npm run stylelint -- --fix"
+    "stylelint:fix": "npm run stylelint -- --fix",
+    "prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prettier:fix": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "tsc:check": "tsc --noEmit"
   },
   "keywords": [
     "js",
