@@ -4,10 +4,9 @@ import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { Layout } from "@components/Layout";
 import { HomePage } from "@pages//home";
 import { LoginPage } from "@pages/login";
+import { UsersPage } from "@pages/users";
+import { RegisterPage } from "@pages/register";
 import { checkAuthThunk } from "@store/thunks/checkAuth.thunk";
-
-// import { UsersPage } from "pages/users";
-// import { RegisterPage } from "./pages/register";
 
 import { useAppDispatch, useAppSelector } from "./hooks";
 
@@ -42,13 +41,13 @@ export const Router = () => {
       <Route path="/" element={<Layout />}>
         <Route element={<RequireAuth />}>
           <Route index element={<HomePage />} />
-          {/* <Route path="/users" element={<UsersPage />} /> */}
+          <Route path="/users" element={<UsersPage />} />
         </Route>
       </Route>
 
       {/* public routes */}
       <Route path="/login" element={<LoginPage />} />
-      {/* <Route path="/register" element={<RegisterPage />} /> */}
+      <Route path="/register" element={<RegisterPage />} />
       <Route path="*" element={<h1>Empty page 💥</h1>} />
     </Routes>
   );
