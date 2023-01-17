@@ -8,6 +8,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const isDev = process.env.NODE_ENV === "development";
+const checkedBuild = process.env.CHECK_BUNDLE_SIZE ? true : false;
 
 const optimization = () => {
   const optimizationConfig = {
@@ -41,7 +42,7 @@ const plugins = () => {
     }),
   ];
 
-  if (!isDev) {
+  if (checkedBuild) {
     basePlugins.push(new BundleAnalyzerPlugin());
   }
 
