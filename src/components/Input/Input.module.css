@@ -1,0 +1,23 @@
+label {
+  margin-bottom: 5px;
+  line-height: 21px;
+  color: #695c5c;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 10px 13px;
+
+  line-height: 24px;
+  color: rgb(0 0 0 / 70%);
+
+  background: rgb(255 255 255 / 8%);
+  border: 1px solid rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid rgb(0 0 0 / 90%);
+}

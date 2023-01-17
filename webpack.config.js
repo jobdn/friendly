@@ -61,6 +61,10 @@ module.exports = {
       "@components": path.join(__dirname, "src", "components"),
       "@pages": path.join(__dirname, "src", "pages"),
       "@utils": path.join(__dirname, "src", "utils"),
+      "@models": path.join(__dirname, "src", "models"),
+      "@services": path.join(__dirname, "src", "services"),
+      "@hooks": path.join(__dirname, "src", "hooks"),
+      "@store": path.join(__dirname, "src", "store"),
     },
     extensions: [".ts", ".tsx", ".jsx", "..."],
   },
@@ -104,6 +108,7 @@ module.exports = {
     hot: isDev,
     port: 3001,
     open: true,
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, "src"),
     },

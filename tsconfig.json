@@ -8,7 +8,11 @@
     "paths": {
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@models/*": ["models/*"],
+      "@services/*": ["services/*"],
+      "@hooks/*": ["hooks/*"],
+      "@store/*": ["store/*"]
     },
     "allowJs": true,
     "noEmit": true,
