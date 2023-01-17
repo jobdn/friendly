@@ -10,7 +10,10 @@ export class AuthService {
     email: string,
     password: string
   ): Promise<AxiosResponse<AuthResponse>> {
-    return await backend.post<AuthResponse>("/auth/login", { email, password });
+    return await backend.post<AuthResponse>(`/auth/login`, {
+      email,
+      password,
+    });
   }
 
   static async register(

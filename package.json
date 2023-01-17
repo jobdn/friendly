@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack --node-env development",
-    "start": "webpack serve --node-env development",
-    "build": "webpack --node-env production",
-    "build:check": "cross-env CHECK_BUNDLE_SIZE=true webpack --node-env production",
+    "start": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:check": "cross-env CHECK_BUNDLE_SIZE=true NODE_ENV=production webpack",
     "prepare": "husky install",
     "test": "jest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
@@ -85,7 +85,6 @@
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
       "eslint --max-warnings 0",
-      "prettier --write",
       "bash -c tsc --noEmit"
     ],
     "**/*.{css,scss}": "stylelint --fix"
