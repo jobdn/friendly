@@ -85,6 +85,7 @@
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
       "eslint --max-warnings 0",
+      "prettier --write",
       "bash -c tsc --noEmit"
     ],
     "**/*.{css,scss}": "stylelint --fix"
