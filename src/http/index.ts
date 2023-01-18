@@ -10,7 +10,7 @@ import { AuthResponse } from "@models/response/AuthResponse";
 import { API_URL } from "../constants/http.constants";
 
 const backend = axios.create({
-  baseURL: "https://fo-api.vercel.app",
+  baseURL: API_URL,
   withCredentials: true,
 });
 
