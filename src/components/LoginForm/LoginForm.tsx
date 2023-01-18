@@ -19,8 +19,6 @@ export const LoginForm: React.FC = () => {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
-    console.log("", process.env.NODE_ENV);
-
     dispatch(loginThunk({ email, password }))
       .unwrap()
       .then(() => {
